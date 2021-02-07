@@ -46,6 +46,9 @@ reference fxLayout:
 
 https://medium.com/angular-in-depth/angular-flex-layout-flexbox-and-grid-layout-for-angular-component-6e7c24457b63
 
+### for Firebase add: package.json
 
-youtube tracks
-https://www.youtube.com/audiolibrary/music?nv=1
+"firebase": "^7.15.0",
+"@angular/fire": "^6.0.0",
+"angularfire2": "^5.4.2",
+

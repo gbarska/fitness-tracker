@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -11,7 +11,7 @@ import { AuthRoutingModule } from './auth-routing.module';
   declarations: [SignupComponent, LoginComponent],
   imports: [
     ReactiveFormsModule,
-    AngularFireAuthModule,
+    // AngularFireAuthModule,
     SharedModule,
     AuthRoutingModule
   ]

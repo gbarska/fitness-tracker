@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
+// import { AngularFirestore } from 'angularfire2/firestore';
 import { Subscription, Observable, of } from 'rxjs';
 import { take, map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
@@ -18,7 +18,7 @@ export class TrainingService {
   finishedExercises: Exercise[] = [];
 
   constructor(
-    private db: AngularFirestore,
+    // private db: AngularFirestore,
     private uiService: UIService,
     private store: Store<fromTraining.State>,
     private _snackBar: MatSnackBar

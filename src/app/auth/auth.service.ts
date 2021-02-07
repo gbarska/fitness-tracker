@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import { MatSnackBar } from '@angular/material';
 import { Store } from '@ngrx/store';
 
@@ -16,7 +16,7 @@ import * as Auth from './auth.actions';
 export class AuthService {
   constructor(
     private router: Router,
-    private afAuth: AngularFireAuth,
+    // private afAuth: AngularFireAuth,
     private trainingService: TrainingService,
     private uiService: UIService,
     private store: Store<fromRoot.State>
