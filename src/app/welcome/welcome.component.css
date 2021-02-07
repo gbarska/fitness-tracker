@@ -1,0 +1,24 @@
+.welcome {
+  text-align: center;
+}
+
+section{
+  margin-top: 20px;
+}
+
+/* img{
+  width: 480px;
+} */
+
+@media (min-width: 800px) 
+{
+  img{
+    width: 480px;
+  }
+}
+@media (max-width: 660px) 
+{
+  img{
+    width: 80%;
+  }
+}
