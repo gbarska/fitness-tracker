@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Subscription, Observable, of } from 'rxjs';
 import { take, map } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
@@ -18,7 +18,7 @@ export class TrainingService {
   finishedExercises: Exercise[] = [];
 
   constructor(
-    // private db: AngularFirestore,
+    private db: AngularFirestore,
     private uiService: UIService,
     private store: Store<fromTraining.State>,
     private _snackBar: MatSnackBar
@@ -31,7 +31,6 @@ export class TrainingService {
       { id: 'lunges', name: 'Lunges', duration: 100, calories: 20, muscle: 'leg', imageURL: 'lunges.jpg'  },
       { id: 'squats', name: 'Squats', duration: 150, calories: 22, muscle: 'leg',imageURL: 'squats.png'  },
       { id: 'wide-push-up', name: 'Wide Push Up', duration: 10, calories: 15, muscle: 'chest', imageURL: 'push-up.jpg'  },
-      // { id: 'diamond-push-up', name: 'Diamond Push Up', duration: 80, calories: 10, muscle: 'chest', imageURL: 'crunches.png'  },
       { id: 'onearm-push-up', name: 'One-Arm Push Up', duration: 160, calories: 20, muscle: 'chest', imageURL: 'onearm-push-up.jpg'  },
       { id: 'burpees', name: 'Burpees', duration: 60, calories: 8, muscle: 'whole', imageURL: 'burpees.jpg' }
     ];
@@ -114,6 +113,7 @@ export class TrainingService {
   }
 
   fetchCompletedOrCancelledExercises() {
+    //FIREBASE
     // this.fbSubs.push(
     //   this.db
     //     .collection('finishedExercises')

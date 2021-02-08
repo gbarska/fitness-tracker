@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-// import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { MatSnackBar } from '@angular/material';
 import { Store } from '@ngrx/store';
 
@@ -16,14 +16,14 @@ import * as Auth from './auth.actions';
 export class AuthService {
   constructor(
     private router: Router,
-    // private afAuth: AngularFireAuth,
+    private afAuth: AngularFireAuth,
     private trainingService: TrainingService,
     private uiService: UIService,
     private store: Store<fromRoot.State>
   ) {}
 
   initAuthListener() {
-    //FIREBASE..
+    //FIREBASE
     // this.afAuth.authState.subscribe(user => {
 
      const isAuth = localStorage.getItem('isAuth');
@@ -41,7 +41,7 @@ export class AuthService {
 
   registerUser(authData: AuthData) {
 
-    //FIREBASE ...
+    //FIREBASE
     // this.afAuth.auth
     //   .createUserWithEmailAndPassword(authData.email, authData.password)
     //   .then(result => {
@@ -59,6 +59,7 @@ export class AuthService {
 
   login(authData: AuthData) {
     this.store.dispatch(new UI.StartLoading());
+    //FIREBASE
     // this.afAuth.auth
     //   .signInWithEmailAndPassword(authData.email, authData.password)
     //   .then(result => {
@@ -84,6 +85,6 @@ export class AuthService {
     this.router.navigate(['/login']);
 
     //FIREBASE
-    // this.afAuth.auth.signOut();
+    //this.afAuth.auth.signOut();
   }
 }

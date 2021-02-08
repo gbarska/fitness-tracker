@@ -22,6 +22,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+### for Firebase add: package.json
+
+## FIREBASE
+
+I have commented the code that persists the data on firebase to protect my private credentials.
+Therefore you can test the app easily because I mocked the data.
+
+If you want to try it with firebase search for 'FIREBASE' at root folder and uncomment the code..
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
@@ -29,14 +38,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 API MOCK BACKEND:
 
-GET EXERCISES:
-http://demo1532320.mockable.io/exercises-angular/exercises
-
-css background
-https://cssgradient.io/
-https://cssgradient.io/gradient-backgrounds/
-
-npm install firebase angularfire2 --save
 npm install firebase @angular/fire
 
 npm install --save @ngrx/effects
@@ -46,9 +47,4 @@ reference fxLayout:
 
 https://medium.com/angular-in-depth/angular-flex-layout-flexbox-and-grid-layout-for-angular-component-6e7c24457b63
 
-### for Firebase add: package.json
-
-"firebase": "^7.15.0",
-"@angular/fire": "^6.0.0",
-"angularfire2": "^5.4.2",
 
