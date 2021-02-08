@@ -1,24 +1,32 @@
 .welcome {
   text-align: center;
+  margin: 20px;
+  box-sizing: border-box;
 }
 
-section{
-  margin-top: 20px;
+.banner{
+  margin: 20px;
+  width: 33%;
+  font-size: 20px;
 }
 
-/* img{
-  width: 480px;
-} */
+img{
+  width: 100%;
+}
 
-@media (min-width: 800px) 
+@media (max-width: 990px) 
 {
-  img{
-    width: 480px;
+  .banner{
+    width: 50%;
+    margin: 5px;
+   font-size: 14px;
   }
 }
-@media (max-width: 660px) 
+
+@media (max-width: 599px) 
 {
-  img{
-    width: 80%;
+  .banner{
+    width: 90%;
+    font-size: 18px;
   }
 }

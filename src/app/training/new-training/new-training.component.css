@@ -1,11 +1,8 @@
 
 .new-training {
-  padding: 30px;
- 
+  padding: 30px 30px 30px 42px;
   background-color: #08AEEA;
   background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
-  
-  
 }
 
 mat-card{

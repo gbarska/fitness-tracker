@@ -1,33 +1,14 @@
 <h1 style="text-align: center">Time to start a workout!</h1>
 <section class="new-training" fxLayout fxLayoutAlign="center">
- 
-  <!-- <form (ngSubmit)="onStartTraining(f)" #f="ngForm"> -->
-    <!-- <mat-card fxFlex.xs="100%" fxFlex="400px">
-      <mat-card-title fxLayoutAlign="center">Time to start a workout!</mat-card-title>
-      <mat-card-content fxLayoutAlign="center">
-        <mat-form-field *ngIf="!(isLoading$ | async) && exercises$ | async">
-          <mat-select placeholder="Choose Exercise" ngModel name="exercise" required>
-            <mat-option *ngFor="let exercise of exercises$ | async" [value]="exercise.id">
-              {{ exercise.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
-      </mat-card-content>
-      <mat-card-actions fxLayoutAlign="center" *ngIf="!(isLoading$ | async)">
-        <button *ngIf="exercises$ | async" type="submit" mat-button [disabled]="f.invalid">Start</button>
-        <button *ngIf="!(exercises$ | async)" type="button" mat-button (click)="fetchExercises()">Fetch Again</button>
-      </mat-card-actions>
-    </mat-card> -->
-    <div 
+     <div 
     fxLayout="row wrap" 
     fxLayout.lt-sm="column" 
     fxLayoutGap="12px" 
     fxLayoutAlign="flex-start">
 
         <mat-card fxFlex="0 1 calc(33.3% - 12px)"
-    fxFlex.lt-md="0 1 calc(50% - 12px)"
-    fxFlex.lt-sm="100%" *ngFor="let exercise of exercises$ | async" >
+        fxFlex.lt-md="0 1 calc(50% - 12px)"
+        fxFlex.lt-sm="100%" *ngFor="let exercise of exercises$ | async" >
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>{{exercise.name}}</mat-card-title>
@@ -47,5 +28,4 @@
           </mat-card>
     </div>
     <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
-  <!-- </form> -->
 </section>
